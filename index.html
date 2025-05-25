@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="media/paper.png" />
+  <title>HealthAI Doc</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      background-color: #fdfaf6;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    video {
+      width: 100%;
+      max-width: 425px;
+      display: block;
+      margin: 0 auto 2rem auto;
+      border-radius: 10px;
+    }
+    img {
+      width: 100%;
+      max-width: 250px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 8px;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .screenshot-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .screenshot-row img {
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>📄 HealthAI Doc</h1>
+
+  <video autoplay muted loop>
+    <source src="media/healthai-demo-vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <h2>Architecture Overview</h2>
+  <p>
+    This SwiftUI app features a chatbot that uses Apple HealthKit data 
+    (steps, heart rate, energy, exercise, sleep) as context to answer health 
+    questions using the DeepCoder 14B LLM via OpenRouter. A separate tab 
+    displays clean charts with toggles to switch between metrics and weekly/monthly views.
+  </p>
+
+  <h2>Challenges & Solutions</h2>
+  <ul>
+    <li><strong>Configuring Info.plist</strong>: Spent an hour trying to find the file... just for a 2-minute youtube video to call me stupid in 4 different languages</li>
+    <li><strong>Swift & SwiftUI Basics</strong>: Learned concepts like struct, enum, and view files on the fly through youtube videos and chatgpt (lightwork)</li>
+    <li><strong>Foundation vs. SwiftUI</strong>: Was confused on the difference between the two imports - realized a pattern and documentation confirmed it</li>
+    <li><strong>Finding the Right LLM</strong>: I wanted a free LLM API (cuz why does everything cost money) so I searched until I landed on DeepCoder 14B which is free and reliable</li>
+    <li><strong>Prompt Engineering</strong>: Wasn't getting the LLM responses I wanted until I designed prompts that included system behavior and health summaries</li>
+    <li><strong>Chart Design</strong>: On the month toggle, was struggling to make the chart look nice and readable - performed a lot of trial and error changing up chart settings until I got it to look right</li>
+    <li><strong>App Layout</strong>: Initially didn't understand how to configure the app - setting up an entry point and tabs - until I asked chatgpt to put everything into react terms (@main is like index.js)</li>
+  </ul>
+
+  <h2>Future Improvements</h2>
+  <p>
+    With more time, I’d expand the app by adding more tabs and features to make 
+    it feel more complete. I’d also make insights proactive with notifications - 
+    “Bro get up and go for a walk!.” I’d explore using a more 
+    advanced model with refined prompt engineering for smarter responses. Lastly, 
+    adding metric summaries and a CSV export option would improve usability and let 
+    users track their health data outside the app.
+  </p>
+
+  <h2>Screenshots</h2>
+  <div class="screenshot-row">
+    <img src="media/healthai-demo-pic-1.png" alt="Demo 1" />
+    <img src="media/healthai-demo-pic-2.png" alt="Demo 2" />
+    <img src="media/healthai-demo-pic-3.png" alt="Demo 3" />
+  </div>
+
+  <h2>GitHub</h2>
+  <p>
+    For setup and full source code:
+    <a href="https://github.com/anshramanath/health-ai-app" target="_blank">HealthAI GitHub Repository</a>
+  </p>
+</body>
+</html>
