@@ -8,4 +8,5 @@ The app has two main tabs:
 
 Everything is displayed clearly and cleanly. This site explains the app's features, the challenges behind making it, and ideas for what could come next.
 
-Check out the full project here: [HealthAI GitHub Repository](https://github.com/anshramanath/health-ai-app)
+- 🔗 [Live Documentation Website](https://anshramanath.github.io/health-ai-doc-website)
+- 💻 [HealthAI GitHub Repository](https://github.com/anshramanath/health-ai-app)
